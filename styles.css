@@ -1,0 +1,944 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family:  "duos-brush", sans-serif;
+}
+
+/* ----- Layout ----- */
+
+body {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: auto minmax(200px, 850px) minmax(200px, 850px) auto;
+    grid-template-rows: min-content auto auto auto  auto auto min-content;
+    grid-template-areas: 
+    "nav nav nav nav"
+    ". header header ."
+    ". content1 content2 ."
+    ". extracontent1 extracontent1 ."
+    ". content3 content3 ."
+    ". content4 content4 ."
+    "footer footer footer footer";
+}
+
+
+
+
+
+
+/* ----- Navigering ----- */
+
+nav {
+    grid-area: nav;
+    background-color: rgba(0, 0, 0, 0.11);
+    display: flex;
+    padding: 1%;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+
+}
+
+nav li {
+    text-decoration: none;
+    display: inline;
+    margin-right: 2em;
+    margin-top: 4%;
+}
+
+nav img {
+    width: 130px;
+    padding-right: 20px;
+}
+nav a {
+    font-size: 18px;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: font-size 0.3s, font-weight 0.3s;
+    position: relative;
+    color: #ffffff;
+}
+
+nav a:hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.menu-toggle {
+    display: none; 
+}
+menu-icon {
+    display: none; 
+    cursor: pointer;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* ----- Header ----- */
+
+header {
+    grid-area: header;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10em 5em 10em 5em;
+    background-size: cover;
+    background-position: center;
+   z-index: 1;
+   margin-top: -110px;
+}
+
+header img {
+    width: 50%;
+    max-width: 700px;
+}
+
+.index header {
+    background-image: url(img/yellowheader.jpg);
+}
+
+.konst header {
+    background-image: url(img/blueheader.jpg);
+    padding: 17%;
+}
+
+.omoss header {
+    background-image: url(img/redheader.jpg);
+    padding: 17%;
+}
+
+.konst .lokalnav ul{
+    display: flex;
+}
+
+.konst .lokalnav li{
+    padding: 10px;
+    
+}
+
+.konst .lokalnav ul {
+    display: flex;
+    list-style: none;
+
+}
+
+.konst .lokalnav li {
+    text-decoration: none;
+    display: inline;
+    margin-right: 2em;
+    margin-top: 4%;
+}
+
+.konst .lokalnav a {
+    font-size: 18px;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: font-size 0.3s, font-weight 0.3s;
+    position: relative;
+    color: #ffffff;
+}
+
+.konst .lokalnav a:hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+
+
+
+
+/* ----- Content1 ----- */
+
+.content1 {
+    grid-area: content1;
+    background-color:#fcf7c6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ikoner {
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+}
+
+.index .content1 a {
+    width: 6em;
+    height: auto;
+    padding: 10%;
+}
+
+.index .content1 img {
+    width: 6em;
+    height: auto;
+}
+
+.index .content1 h2 {
+    font-size: 3rem;
+    margin-bottom: -20px;
+}
+
+.konst .content1 img {
+    width: 100%; 
+    height: 100%;         
+    object-fit: cover;
+}
+
+.omoss .content1 img {
+    width: 100%; 
+    height: 100%;         
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ----- Content2 ----- */
+
+.content2 {
+    grid-area: content2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index .content2 {
+    background-image: url(img/konstnarbutik.jpg);
+    background-size: cover;
+    padding: 10em 5em 10em 5em;
+
+}
+
+
+.index .content2 a {
+    font-size: 60px;
+    color: #000000;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #000000;
+    font-family:  "duos-brush", sans-serif;
+    text-decoration: none;
+}
+
+.index .content2 #konstnär {
+    margin-top: -0.7em;
+}
+
+
+.index .content2:hover a{
+    opacity: 1;
+    text-shadow: 4px 4px 20px rgba(255, 255, 255, 0.979);
+}
+
+.konst .content2 {
+    background-color: #fcf7c6;
+    padding: 10em 5em 10em 5em;
+}
+
+.omoss .content2 {
+    background-color: #fcf7c6;
+    padding: 20%;
+}
+
+.omoss .content2 img {
+    max-width: 400px;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* ----- Extra Content 1----- */
+
+
+.extracontent1{
+    grid-area: extracontent1 ;
+    display: flex;
+    background-color: #27234e;
+}
+
+.omoss .extracontent1 {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.vision, .mål, .ansvar {
+    flex: 1;
+    transition: padding 0.5s
+}
+
+.vision {
+    background-image: url(img/pilered.jpg);
+    box-shadow: inset -6px 0px 6px rgba(0, 0, 0, 0.377);
+    background-position: center;
+    background-size: cover;
+}
+
+.mål {
+    background-image: url(img/pilebrown.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 6px 0px 6px rgba(0, 0, 0, 0.377);
+}
+
+.ansvar {
+    background-image: url(img/pileblue.jpg);
+    box-shadow: inset 6px 0px 6px rgba(0, 0, 0, 0.377);
+    background-position: center;
+    background-size: cover;
+}
+.extracontent1 h3 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: -80px;
+    color: #ffffff;
+    padding-top: 10%;
+}
+
+.extracontent1 p {
+    padding: 10%;
+    color: transparent; 
+    transition: color 0.5s, opacity 0.5s; 
+    opacity: 00; 
+}
+
+.vision:hover, .mål:hover, .ansvar:hover {
+   padding: 0% 2%;
+   background-image: none;
+}
+
+
+.vision:hover p,
+.mål:hover p,
+.ansvar:hover p {
+    color: #ffffff; 
+    opacity: 1; 
+}
+
+
+
+
+
+/* ----- Content3 ----- */
+
+.content3 {
+    grid-area: content3;
+    background-color: blanchedalmond;
+    display: flex;
+    width: 100%;
+}
+
+.index .content3 {
+    background-image: url(img/pileofjeans.jpg);
+    background-size: cover;
+    background-position: 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 50px 30px;
+}
+
+.index .content3 h1 {
+    font-size: 600%;
+    margin: -5px 0px -5px; 
+    color: #ffffff;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.index .content3 p {
+    font-size: 16px;
+    padding: 20px;
+    max-width: 700px;
+    color: #ffffff;
+
+}
+
+.index .content3 .nyhetsbrev {
+    padding: 15px;
+    border-radius: 60px;
+    background-color: #fff4d4;
+    box-shadow: 6px 6px 15px #2b2b2b7e;
+    width: 46rem;
+
+}
+
+.index .content3 .nyhetsbrev input{
+    font-size: 18px;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 60px;
+    outline: none;
+    background-color: #ffeeb7;
+    width: 74%;
+    color: #c98200;
+}
+
+.index .content3 .nyhetsbrev button{
+    color: #fff6ef;
+    padding: 15PX 20PX;
+    font-size: 20px;
+    border: none;
+    border-radius: 60px;
+    background-color: #ebb41b;
+}
+
+
+.index .content3 .nyhetsbrev button:hover{
+    background-color: #ffd858;
+}
+
+.index .content3 .nyhetsbrev input:focus {
+  background-color: #ffe58e;
+  outline: none;
+}
+
+
+
+
+
+
+.konst .content3 {
+        flex-wrap: wrap;
+        background-color: #fffae1;
+}
+
+.konst .content3 img {
+    flex: 1 0 calc(33.33%); 
+    max-height: 400px; 
+    object-fit: cover; 
+    transition: transform 0.2s, opacity 0.3s, filter 0.3s;
+    opacity: 0.8;
+    z-index: 1;
+    filter: blur(2px);
+}
+
+.konst .content3 img:hover  {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px 7px #14141467;
+    opacity: 1;
+    z-index: 10;
+    filter: blur(0)
+}
+
+
+.omoss .content3 {
+    flex-wrap: wrap;
+}
+
+.omoss .content3 img {
+flex: 1 0 calc(20%); 
+max-height: 400px; 
+object-fit: cover; 
+margin: 0%;
+transition: transform 0.3s, filter 0.3s;
+mix-blend-mode:multiply;
+z-index: 1;
+filter: blur(2px);
+}
+
+.omoss .content3 .text {
+    background-color: #fce0c6;
+    text-align: center;
+    padding: 0% 30% 5% 30%;
+
+}
+
+.omoss .content3 .text h2 {
+    font-size: 6em;
+    margin-bottom: -3%;
+
+    
+}
+
+.omoss .content3 img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 4px 4px 10px 7px #141414b2;
+    mix-blend-mode: normal;
+    z-index: 10;
+    filter: blur(0)
+}
+
+
+
+
+
+
+/* ----- Content4 ----- */
+    
+.content4 {
+    grid-area: content4;
+}
+
+
+.konst .content4 {
+    padding: 10%; 
+    background-image: url(img/yellow-926728_1920.jpg);
+}
+
+.konst .content4 #anmälan {
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 40px;
+    border-radius: 8px;
+    color: #000000;
+    background-color: #eb981b52;
+}
+
+.konst fieldset {
+    border: 2px solid #ffc400;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px #0000002f;
+  }
+
+.konst legend {
+    font-family:  "duos-brush", sans-serif;
+    font-size: 2rem;
+    margin-bottom: -30px;
+}
+
+.konst label {
+display: block;
+width: 90%;
+padding:3% 0% 1% 0%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+textarea {
+    background-color: #ffffff;
+    border: 2px solid #ff9900a1;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+}
+
+.konst 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+     width: 90%;
+     padding: 10px;
+}
+
+.konst input[type="number"]{
+     width: 20%;
+     text-align: center;
+     padding: 10px;
+}
+
+.konst textarea{
+    height: 100px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  background-color: #ffe58e;
+  border: 2px solid #ffe9c9;
+  outline: none;
+}
+
+.konst button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 2px solid #ffe1c9;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.konst button[type="submit"]:hover {
+    background-color: #ffd858;
+    border: 2px solid #ffe6c9;;
+}
+
+.konst .content4 .formtext{
+    text-align: center;
+    padding: 0% 15% 5% 15%; 
+}
+
+.konst .content4 h3{
+    font-size: 3rem;
+}
+
+.konst .content4 h2{
+    padding-top: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* ----- Footer ----- */
+
+footer {
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.342);
+    margin-top: -50px;
+    padding-left: 20px;
+    z-index: 20;
+}
+
+
+
+
+/* ----- Media ----- */
+
+@media (max-width: 1600px) {
+    body {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "nav nav"
+            "header header"
+            "content1 content2"
+            "extracontent1 extracontent1"
+            "content3 content3"
+            "content4 content4"
+            "footer footer";
+        height: 100vh;
+        width: 100%;
+    }
+
+    .index .content2 {
+            padding: 300px 50px 300px 50px;
+    }
+    
+    .index .content2 img {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: minmax(200px, 850px);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "nav"
+            "header"
+            "content1"
+            "content2"
+            "extracontent1"
+            "content3"
+            "content4"
+            "footer";
+        height: 100vh;
+        width: 100%;
+    }
+    
+    nav {
+     grid-area: nav;
+    background-color: rgb(255, 187, 0);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    align-items: flex-start;
+    height: 80px;
+    width: 80px;
+    border-bottom-right-radius: 40px;
+    }
+    
+    .index nav {
+       background-color: rgb(255, 220, 122);
+    }
+
+    .index .navlista ul {
+        background-color: rgba(139, 102, 0, 0.527);
+    }
+
+    .omoss nav {
+        background-color: rgb(255, 115, 91);
+    }
+
+    .omoss .navlista ul {
+        background-color: rgba(168, 25, 0, 0.555);
+    }
+
+    .konst nav {
+        background-color: rgb(103, 199, 255);
+    }
+
+    .konst .navlista ul {
+        background-color: rgba(0, 79, 124, 0.459);
+    }
+
+    .menu-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2; 
+    opacity: 0; 
+    }
+    
+    .menu-icon {
+        display: block;
+        margin-top: 18px;
+        margin-left: 14px;
+    }
+
+   
+    
+    nav ul {
+        display: flex; 
+        flex-direction: column; 
+        padding: 20px;
+        margin-left: -10px;
+        margin-top: -2px;
+        list-style: none;
+        width: 100%;
+        opacity: 0; 
+        max-height: 0;
+        overflow: hidden; 
+        transition: opacity 0.3s ease, max-height 0.5s ease;
+    }
+
+    .menu-toggle:checked + .menu-icon + .navlista ul {
+        display: flex;
+        opacity: 1; 
+        max-height: 500px;
+    }
+    
+    nav li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left; 
+    }
+    
+    nav img {
+        width: 100px;
+         padding-right: 10px;
+    }
+    
+    .menu-icon img {
+         width: 30px;
+        height: auto; 
+    }
+    
+    header {
+        padding-top: 160px;
+        padding-bottom: 100px;
+        margin-top: -80px;
+    
+    }
+
+    .navlogo {
+        display: none;
+    }
+
+    .index .content2 {
+        padding: 300px 50px 300px 50px;
+    }
+    
+    .index .content2 img {
+        width: 100%;
+    }
+    
+    .konst .content1 {
+        grid-area: content2;
+    }
+
+    .konst .content2 {
+        grid-area: content1;
+        padding: 30px;
+    }
+    
+    .konst .content3 {
+        flex-wrap: wrap;
+        background-color: rgb(255, 239, 167);
+    }
+
+    .konst .content3 img {
+        flex: 1 0 calc(50%);       
+        max-height: 400px;  
+        width: 100%;
+        
+    }
+
+    .vision, .mål, .ansvar {
+        background-image: none;
+    }
+
+      .extracontent1{
+        background-image: url(img/can-1995679_1280.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .vision {
+        box-shadow: none;
+    }
+    
+    .ansvar {
+        box-shadow: none;
+    }
+   
+    .extracontent1 h3{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    
+    .index .content3 h1 {
+        font-size: 300%;
+        margin: 0px 0px 0px;
+    }
+    
+    .index .content3 p {
+        padding: 20px;
+        max-width: 700px;
+       
+    }
+    
+    .index .content3 .nyhetsbrev {
+        width: 25rem;
+        border-radius: 20px;
+    }
+
+    .index .content3 .nyhetsbrevinfo {
+        width: 25rem;
+    }
+    
+    .index .content3 .nyhetsbrev input{
+        font-size: 14px;
+        padding: 15px 10px;
+        width: 95%;
+    }
+    
+    .index .content3 .nyhetsbrev button{
+        color: #fff6ef;
+        padding: 15PX 20PX;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+@media (max-width: 650px) {
+    .omoss .extracontent1{
+        flex-direction: column;
+    }
+
+    .omoss .content3 .text {
+        text-align: center;
+        padding: 0% 10% 5% 10%;
+          
+    }
+    
+    .omoss .content3 .text h2 {
+        font-size: 6rem;
+        margin-bottom: -3%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+
+    header {
+        padding: 5em 2em 5em 2em;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        padding: 1%;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav li {
+        text-decoration: none;
+        display: inline;
+        margin-right: 2em;
+        margin-top: 5%;
+    }
+    
+    nav img {
+        width: 130px;
+    }
+    
+    .index .content3 .nyhetsbrevinfo {
+        width: 100%;
+        border-radius: 20px;
+    
+    }
+    
+    .index .content3 .nyhetsbrev input{
+        border-radius: 10px;
+        width: 90%;
+    }
+    
+    .index .content3 .nyhetsbrev button{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+
+@media (min-width: 801px) {
+    .menu-icon {
+        display: none !important;
+    }
+}

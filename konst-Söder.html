@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/qjx1vow.css" />
+    <title>EditTwice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="konst">
+    <nav>
+      <div class="navlogo">
+        <img src="img/EditTwicelogo1.png" alt="Logo" />
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <img src="img/meny.png" alt="Meny" />
+      </label>
+
+      <div class="navlista">
+        <ul>
+          <li><a href="Index.html">START</a></li>
+          <li><a href="omoss.html">NYFIKEN</a></li>
+          <li><a href="konst.html">KONSTNÄRER</a></li>
+          <li><a href="rapport.html">RAPPORT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <img src="img/madansenskonstnar.png" alt="EDITTWICE" />
+      <p>
+        Läs mer om vem som fyller vår butik med konst och unika skapelser denna
+        månaden eller klicka vidar för att kolla in våra tidigare
+        konstnärssammarbeten.
+      </p>
+      <div class="lokalnav">
+        <ul>
+          <li><a href="konst.html">Matilda Fjällgren</a></li>
+          <li><a href="konst-Patrik.html">Patriks atelje</a></li>
+          <li><a href="konst-Söder.html">Söderås Krukmakeri</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content1"><img src="img/soder.jpg" alt="Rut" /></div>
+
+    <div class="content2">
+      <h2>Månadens konstnär September</h2>
+      <p>
+        Jag heter Rut, och jag är glad att få visa mina handgjorda keramikföremål från Söderåsens Krukmakeri här hos EditTwice. Varje skål, kopp och fat är noggrant drejad och glaserad i min verkstad, där jag hämtar inspiration från naturens former och färger. Jag lägger stor omsorg i varje detalj för att skapa unika föremål som inte bara är vackra utan också funktionella i vardagen.
+        <br />
+        Att arbeta med lera ger mig möjlighet att skapa allt från rustika och jordnära till moderna och eleganta uttryck. Jag hoppas att du hittar något som talar till dig och ger samma värme i hemmet som jag kände när jag skapade det. Välkommen förbi butiken för att hitta ett föremål som kanske blir din nya favorit i hemmet.
+      </p>
+      <img src="img/sodertext.png" alt="Söderåsens Krukmakeri" />
+    </div>
+
+    <div class="content3">
+      <img src="img/pottery(1).jpg" alt="pottery" />
+      <img src="img/pottery(2).jpg" alt="pottery" />
+      <img src="img/pottery(3).jpg" alt="pottery" />
+      <img src="img/pottery(4).jpg" alt="pottery" />
+      <img src="img/pottery(5).jpg" alt="pottery" />
+      <img src="img/potter(6).jpg" alt="pottery" />
+    </div>
+
+    <div class="content4">
+      <div class="formtext">
+        <h3>Vi vill höra från dig!</h3>
+        <p>
+          Vi söker passionerade och kreativa konstnärer som vill samarbeta med
+          oss. Om du är intresserad av att ställa ut eller sälja dina verk hos
+          oss, fyll i vårt intresseanmälan! Det är en fantastisk möjlighet att
+          nå ut till nya kunder och visa upp din konst i en inspirerande miljö.
+          Tillsammans kan vi skapa något unikt och ge livet till våra gemensamma
+          passioner.
+        </p>
+      </div>
+
+      <form id="anmälan" method="post" action="...">
+        <fieldset class="person" id="fält1">
+          <legend>Om dig</legend>
+          <label for="fullstandigt-namn">Fullständigt namn:</label>
+          <input type="text" id="fullstandigt-namn" required />
+
+          <label for="email">E-post:</label>
+          <input type="email" id="email" required />
+
+          <label for="alder">Ålder:</label>
+          <input type="number" id="alder" min="18" max="110" required />
+        </fieldset>
+
+        <fieldset class="person" id="fält2">
+          <legend>Konstnärlig profil</legend>
+          <label for="konstnarlig-stil"
+            >Beskriv din konstnärliga stil och teknik:</label
+          >
+          <textarea id="konstnarlig-stil" required></textarea>
+
+          <label for="portfolio"
+            >Har du en portfolio/hemsida/sociala medier?:</label
+          >
+          <input
+            type="url"
+            id="portfolio"
+            placeholder="Länk till portfolio/hemsida"
+          />
+
+          <label for="erfarenhet"
+            >Har du erfarenhet av att sälja dina verk?</label
+          >
+          <input type="text" id="erfarenhet" required />
+        </fieldset>
+
+        <fieldset class="verk" id="fält3">
+          <legend>Verk och Produkter</legend>
+          <label for="typer-av-verk"
+            >Vilka typer av verk vill du ställa ut/sälja?:</label
+          >
+          <input
+            type="text"
+            id="typer-av-verk"
+            placeholder="Målningar, skulpturer, smycken, textilier, etc"
+            required
+          />
+
+          <label for="antal-verk"
+            >Hur många verk skulle du kunna ställa ut/sälja?</label
+          >
+          <input type="number" id="antal-verk" min="1" required />
+        </fieldset>
+
+        <button type="submit">Skicka</button>
+      </form>
+
+      <h2>Vi ser fram emot att höra från dig</h2>
+    </div>
+
+    <footer>
+      <p>2024 EditTwice AB All rights reserved</p>
+    </footer>
+  </body>
+</html>
